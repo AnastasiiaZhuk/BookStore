@@ -22,12 +22,10 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -38,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Users.apps.UsersConfig'
+
+    'Users.apps.UsersConfig',
+    'Pages.apps.PagesConfig'
 ]
 
 AUTH_USER_MODEL = 'Users.CustomUser'
@@ -74,6 +74,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Store.wsgi.application'
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
