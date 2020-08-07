@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'Users.apps.UsersConfig',
     'Pages.apps.PagesConfig'
 ]
@@ -74,6 +74,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Store.wsgi.application'
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases

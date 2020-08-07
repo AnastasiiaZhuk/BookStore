@@ -1,7 +1,7 @@
 # Pycharm stuff
 .idea
 __pycache__/
-
+migrations
 # enviroments
 venv
 
