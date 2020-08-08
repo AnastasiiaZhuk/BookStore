@@ -2,8 +2,13 @@
 .idea
 __pycache__/
 migrations
+Store/static/admin
+Store/static/css
+
 # enviroments
 venv
+staticfiles
+
 
 # Django stuff
 *.log
