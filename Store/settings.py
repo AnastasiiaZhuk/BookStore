@@ -27,8 +27,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'Users.apps.UsersConfig',
-    'Pages.apps.PagesConfig'
+    'Pages.apps.PagesConfig',
+    'Books.apps.BooksConfig',
+
 ]
 
 SITE_ID = 1
@@ -49,7 +52,11 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+# email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'b000ks.in.st0re@gmail.com'
+
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -87,6 +94,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Store.wsgi.application'
 
 # Allauth configuration
+
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
