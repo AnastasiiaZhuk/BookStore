@@ -11,5 +11,6 @@ urlpatterns = [
 
     path('', include('Pages.urls')),
     path('books/', include('Books.urls')),
+    path('orders/', include('Orders.urls'))
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

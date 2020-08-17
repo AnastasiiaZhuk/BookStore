@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'Users.apps.UsersConfig',
     'Pages.apps.PagesConfig',
     'Books.apps.BooksConfig',
+    'Orders.apps.OrdersConfig',
+
 
 ]
 
@@ -56,8 +58,6 @@ AUTHENTICATION_BACKENDS = (
 # email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'b000ks.in.st0re@gmail.com'
-
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
