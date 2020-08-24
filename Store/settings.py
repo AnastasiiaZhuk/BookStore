@@ -18,11 +18,13 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1'
+]
 
 # Application definition
 
@@ -58,6 +60,9 @@ AUTHENTICATION_BACKENDS = (
 # email configuration
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'b000ks.in.st0re@gmail.com'
+
+STRIPE_TEST_PUBLISHABLE_KEY = 'pk_test_51HGkzOA7juhr9QzHCjo1aNbUgQM4bSBzz6zbdAwuBdwmwHT5nQzlDekmg5VbLWDBj49Y1UporeNXTa5AvijGzlRy00I4r7CyVf'
+STRIPE_TEST_SECRET_KEY = 'sk_test_51HGkzOA7juhr9QzHyNW7uaH4xKLLOVLVr54mEcl4jbi2661CW2498Z5V2feQkypTyrHQs7e1DEwBEjpnAycTolon005kC4JF5z'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
